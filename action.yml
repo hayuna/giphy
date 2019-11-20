@@ -1,5 +1,6 @@
 name: 'Telegram Action 98797979879879'
 description: 'Telegram notification for workflow set up with Github Actions'
+icon: alert-circle
 author: <name>
 inputs:
   botToken:
