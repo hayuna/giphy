@@ -29,6 +29,7 @@ async function _sendMessage(botToken: String, chatId: String, jobStatus: String 
     const repoUrl = `https://github.com/${repoFullName}`
     let icon: String
     switch(status) {
+        
         case 'success': icon = '✅'; break;
         case 'failure': icon = '🔴'; break;
         default: icon = '⚠️'; break;
