@@ -1,10 +1,12 @@
-const core = require('@actions/core')
-const { context } = require('@actions/github')
+const core = require('@actions/core');
+const { context } = require('@actions/github');
 
-(async function run() {
+async function run() {
     try {
-        core.debug('message sent')
+        core.debug('message sent');
     } catch (error) {
-        core.setFailed(error.message)
+        core.setFailed(error.message);
     }
-})()
+}
+
+run();
