@@ -16,6 +16,7 @@ import request from 'request-promise-native'
     }
 })()
 
+
 async function _sendMessage(botToken: String, chatId: String, jobStatus: String = 'success', skipSuccess: Boolean = true) {
     const status = (jobStatus || '').toLowerCase()
     if(status === 'success' && skipSuccess) {
