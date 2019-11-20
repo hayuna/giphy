@@ -1,13 +1,19 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Telegram Action'
+description: 'Telegram notification for workflow set up with Github Actions'
+author: <name>
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  botToken:
+    description: 'The Telegram Bot token'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
+  chatId:
+    description: 'The target to which the message will be sent, can be a Telegram Channelor Group'
+    required: true
+  jobStatus:
+    description: 'The current sttaus of the job: job.status, defaults to `success`'
+    default: 'success'
+  skipSuccess:
+    description: 'Only non-success notification will be sent if true, include success notification otherwise, defaults to `true`'
+    default: 'true'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'lib/main.js'
