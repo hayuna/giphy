@@ -15,8 +15,8 @@ inputs:
     required: false
     default: lgtmapp
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "node12"
+  main: "index.js"
 branding:
   icon: 'thumbs-up'
   color: 'blue'
